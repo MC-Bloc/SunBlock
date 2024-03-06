@@ -12,7 +12,7 @@ The complete setup consists of:
 4. A power controller. 
 5. ESP32 Microcontroller
 
-The Power controller is connected to the Solar Panel, the battery, and the server, and the microcontroller.
+The Power controller is connected to the Solar Panel, the battery, the server computer, and the microcontroller.
 
 Readings from the power controller are measured by this microcontroller and sent to the server computer via microusb.  
 
