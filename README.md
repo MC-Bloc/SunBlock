@@ -47,6 +47,7 @@ People in the Solar Minecraft Project at TAG Research Lab, Milieux Institute, Co
 
 ### The Solar Panel 
 * ECOWORTHY ECOM-100
+* [Details here](https://ca.eco-worthy.com/products/100w-12v-monocrystalline-solar-panel?gad_source=1&gclid=Cj0KCQjw2PSvBhDjARIsAKc2cgO-MuBKQ9RQny90ADCxcD9nJG9Rd4wowOLRUn5X54ssqMXJwJKo1DkaAj3pEALw_wcB)
 
 ### The Power Controller 
 * EPEVER MPPT Solar Charge Controller
@@ -64,5 +65,4 @@ People in the Solar Minecraft Project at TAG Research Lab, Milieux Institute, Co
 
 * Intel Celeron Dual core 2.16GHz 
 * 4GB RAM
-* 
-
+* 120GB SSD 
