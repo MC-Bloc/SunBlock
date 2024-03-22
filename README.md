@@ -8,8 +8,8 @@ This port is currently only accessible via VPN.
 The complete setup consists of:
 1. A Battery 
 2. A Solar panel 
-3. The Server computer
-4. A power controller. 
+3. The Server computer 
+4. A power controller (
 5. ESP32 Microcontroller
 
 The Power controller is connected to the Solar Panel, the battery, the server computer, and the microcontroller.
@@ -35,4 +35,34 @@ People in the Solar Minecraft Project at TAG Research Lab, Milieux Institute, Co
 4. Ella Noyes
 5. Mario Gaudio
 6. Don Undeen
-7. Shahrom Ali 
+7. Shahrom Ali
+
+## Component Specs 
+
+### The Battery 
+
+* LiFePO4 Sealed battery 
+* 216Wh
+* 18Ah
+
+### The Solar Panel 
+* ECOWORTHY ECOM-100
+
+### The Power Controller 
+* EPEVER MPPT Solar Charge Controller
+* 30A
+
+### The Main Server 
+
+* Intel Core i7 10th Gen Octacore Processor 
+* 32GB RAM
+* 512GB SSD
+* AVG idle power consumption 7W
+* Running Ubuntu 22.04 LTS Jammy Jellyfish
+
+### The Secondary Computer 
+
+* Intel Celeron Dual core 2.16GHz 
+* 4GB RAM
+* 
+
