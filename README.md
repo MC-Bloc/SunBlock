@@ -52,6 +52,7 @@ People in the Solar Minecraft Project at TAG Research Lab, Milieux Institute, Co
 ### The Power Controller 
 * EPEVER MPPT Solar Charge Controller
 * 30A
+* [Manual here](https://www.epever.com/upload/cert/file/1811/Tracer-AN-SMS-EL-V1.0.pdf)
 
 ### The Main Server 
 
