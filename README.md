@@ -2,6 +2,8 @@
 
 Documentation repo for the solar Minecraft project. Newcomers: start here. 
 
+<img src ="./assets/SunblockSystemDiagram.png" width=550>
+
 The server runs the mod in a forge server instance, over the standard minecraft server port 25565. 
 This port is currently only accessible via VPN. 
 
