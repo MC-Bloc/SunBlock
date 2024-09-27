@@ -1,5 +1,7 @@
 # Sunblock One
 
+## How to build a Sunblock 
+
 Documentation repo for the solar Minecraft project. Newcomers: start here. 
 
 <img src ="./assets/Sunblock_-_System_Diagram.png" width=550>
