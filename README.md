@@ -6,13 +6,13 @@ Documentation repo for the solar Minecraft project. Newcomers: start here.
 
 <img src ="./assets/Sunblock_-_System_Diagram.png" width=550>
 
-The server runs the mod in a forge server instance, over the standard minecraft server port 25565. 
+The server runs the mod in a CubeCoders AMP instance, in a forge server instance, over the standard minecraft server port 25565. 
 This port is currently only accessible via VPN. 
 
 The complete setup consists of:
 1. A Battery 
 2. A Solar panel 
-3. The Server computer 
+3. The Server (Mini PC)  
 4. A power controller (
 5. ESP32 Microcontroller
 
@@ -46,8 +46,8 @@ People in the Solar Minecraft Project at TAG Research Lab, Milieux Institute, Co
 ### The Battery 
 
 * LiFePO4 Sealed battery 
-* 216Wh
-* 18Ah
+* 600Wh
+* 50Ah
 
 ### The Solar Panel 
 * ECOWORTHY ECOM-100
@@ -62,11 +62,11 @@ People in the Solar Minecraft Project at TAG Research Lab, Milieux Institute, Co
 
 * Intel Core i7 10th Gen Octacore Processor 
 * 32GB RAM
-* 512GB SSD
-* AVG idle power consumption 7W
+* 1TB Crucial NVMe SSD  
 * Running Ubuntu 22.04 LTS Jammy Jellyfish
 
 ### The Secondary Computer 
+An intel NUC with windows on it, used to tweak the EPEVER solar controller.
 
 * Intel Celeron Dual core 2.16GHz 
 * 4GB RAM
