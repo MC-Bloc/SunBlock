@@ -60,7 +60,7 @@ People in the Solar Minecraft Project at TAG Research Lab, Milieux Institute, Co
 
 ### The Main Server 
 
-* Intel Core i7 10th Gen Octacore Processor 
+* Intel Core(TM) i7-1065G7 (4C\8T)
 * 32GB RAM
 * 1TB Crucial NVMe SSD  
 * Running Ubuntu 22.04 LTS Jammy Jellyfish
