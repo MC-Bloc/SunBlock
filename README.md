@@ -37,7 +37,7 @@ The JSON file (from the logical layer) is read by the minecraft mod. Then this d
 
 ## Repositories: 
 
-1. [The Modpack]([https://github.com/en4395/Solar_Minecraft](https://github.com/MC-Bloc/SB1-DataVisMod))
+1. [The Modpack](https://github.com/MC-Bloc/SB1-DataVisMod)
 2. Power Readings (coming soon)
 3. Shell & systemd Scripts (coming soon)
 
