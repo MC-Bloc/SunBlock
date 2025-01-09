@@ -1,73 +1,85 @@
-# Sunblock One
+# Sunblock One 
+## How To Build A Sunblock
 
-## How to build a Sunblock 
+Sunblock is a solar-powered minecraft server first built at the Milieux Institute, Concordia University, Montreal, Canada. For more on the project checkout [main project website](https://minecraftbloc.milieux.ca/sunblock/)
 
-Documentation repo for the solar Minecraft project. Newcomers: start here. 
+Sunblock has a few core components but it is useful to think of them in 3 layers. These are:
+1. Physical Layer
+2. Logical Layer
+3. Game Layer
 
-<img src ="./assets/Sunblock_-_System_Diagram.png" width=550>
+As a whole you can see that the three layers are related like this: 
+<img src ="./assets/Sunblock_-_System_Diagram.png" width=900>
 
-The server runs the mod in a CubeCoders AMP instance, in a forge server instance, over the standard minecraft server port 25565. 
-This port is currently only accessible via VPN. 
+For details on the specs of the components, checkout [the components section](#components)
 
-The complete setup consists of:
-1. A Battery 
-2. A Solar panel 
-3. The Server (Mini PC)  
-4. A power controller (
-5. ESP32 Microcontroller
+### Physical Layer 
+The physical layer comprises of:
+1. The Solar Panel
+2. The Solar Controller
+3. The Server computer
+4. The ESP32 Microcontroller
+5. The Battery 
 
-The Power controller is connected to the Solar Panel, the battery, the server computer, and the microcontroller.
+The Solar controller is connected to the Solar Panel, the battery, the server computer, and the microcontroller. Readings from the solar controller are measured by this microcontroller and sent to the server computer via microusb.  
 
-Readings from the power controller are measured by this microcontroller and sent to the server computer via microusb.  
 
-An arduino script interfaces with the microcontroller. And a separate python script interfaces with the arduino script, collecting data in a JSON file. 
+### Logical Layer
+Everything inside the Server computer is part of the logical layer 
 
-The stats collected in the JSON file are what we will read and put into the mod pack to derive game mechanics.  
+An arduino script interfaces with the microcontroller. And a python script interfaces with the arduino scripts results, collecting all data in a simple SQLite database, while also putting instantaneous data in a JSON file.
+
+
+### Game Layer 
+While you can run a plain Java instance of minecraft, we run Minecraft through a CubeCoders AMP instance. Sunblock runs forge minecraft. The choice of the port is up to you.
+
+The JSON file (from the logical layer) is read by the minecraft mod. Then this data is sent to the clients running the same mod. 
 
 ## Repositories: 
 
-1. [The Modpack](https://github.com/en4395/Solar_Minecraft)
+1. [The Modpack]([https://github.com/en4395/Solar_Minecraft](https://github.com/MC-Bloc/SB1-DataVisMod))
 2. Power Readings (coming soon)
 3. Shell & systemd Scripts (coming soon)
 
-## People
-People in the Solar Minecraft Project at TAG Research Lab, Milieux Institute, Concordia University, Montreal. 
 
-1. Bart Simon (PI)
-2. Darren Wershler (PI)
-3. Stuart Thiel
-4. Ella Noyes
-5. Mario Gaudio
-6. Don Undeen
-7. Shahrom Ali
 
-## Component Specs 
+## Components 
 
 ### The Battery 
-
-* LiFePO4 Sealed battery 
-* 600Wh
-* 50Ah
+Throughout the project we have only used 12V LiFePO4 Sealed batteries. We first started with an 18Ah (216Wh) battery but because it got damaged we were not getting full charge capacities. We next went to a 20Ah (240Wh) battery which lasted us less than 24 hours. Next we went to a 50Ah (600Wh) battery which gave us much better performance but we still havent gotten the desired balance so next we will be going to 100Ah (1200Wh).
 
 ### The Solar Panel 
 * ECOWORTHY ECOM-100
 * [Details here](https://ca.eco-worthy.com/products/100w-12v-monocrystalline-solar-panel?gad_source=1&gclid=Cj0KCQjw2PSvBhDjARIsAKc2cgO-MuBKQ9RQny90ADCxcD9nJG9Rd4wowOLRUn5X54ssqMXJwJKo1DkaAj3pEALw_wcB)
 
-### The Power Controller 
+### The Solar Controller 
 * EPEVER MPPT Solar Charge Controller
 * 30A
 * [Manual here](https://www.epever.com/upload/cert/file/1811/Tracer-AN-SMS-EL-V1.0.pdf)
 
-### The Main Server 
+For the solar controller, sometimes you need to tweak the controller parameters. We connect the controller via RS45 cable to a windows and used EPEVER provided software. [Find this here](https://www.epever.com/support/softwares/?_gl=1*1nqa40u*_up*MQ..*_gs*MQ..&gclid=EAIaIQobChMI5bjtu4XoigMVek7_AR0PKRM7EAAYASAAEgKcTPD_BwE)
+
+### The Server Computer 
 
 * Intel Core(TM) i7-1065G7 (4C\8T)
 * 32GB RAM
 * 1TB Crucial NVMe SSD  
 * Running Ubuntu 22.04 LTS Jammy Jellyfish
 
-### The Secondary Computer 
-An intel NUC with windows on it, used to tweak the EPEVER solar controller.
+### The Microcontroller 
+Thats just an ESP32. We use this to read data from the solar controller. This controller can be powered by both: The Solar controller via an ethernet port and the PC via USB. 
 
-* Intel Celeron Dual core 2.16GHz 
-* 4GB RAM
-* 120GB SSD 
+----
+## People
+
+1. Bart Simon (PI)
+2. Darren Wershler (PI)
+3. Stuart Thiel
+4. Quinn Sagio
+5. Rosie MacDonald 
+6. Shahrom Ali
+7. Mario Gaudio
+8. Don Undeen
+9. Ella Noyes
+
+
