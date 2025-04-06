@@ -4,9 +4,9 @@ Shahrom's Journal entries
 ## 5th April 2025 
 I have just completed mounting the system on the painted case. 
 
-<img src ="./assets/IMG_6965.jpg" width=450>
-<img src ="./assets/IMG_6966.jpg" width=450>
-<img src ="./assets/IMG_6967.jpg" width=450>
+<img src ="../assets/IMG_6965.jpg" width=450>
+<img src ="../assets/IMG_6966.jpg" width=450>
+<img src ="../assets/IMG_6967.jpg" width=450>
 
 Also mounted the fan and the power connection shows that the system is live.
 
