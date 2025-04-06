@@ -2,6 +2,28 @@
 Shahrom's Journal entries 
 
 ## 5th April 2025 
+
+### 11.15 PM
+Decided to reinstall OS. Ubuntu Server 24.04 LTS. Boot via USB from bios, keys may be ESC or DEL/Delete on boot.
+
+1. Language: English
+2. Keyboard Layout: English (US)
+3. Base Installation: Ubuntu Server + Third Party Drivers 
+4. Network: left default (enp2s0, DHCPv4), no bonds created.
+5. No Proxy
+6. Default mirror used (http://ca.archive.ubuntu.com/ubuntu)
+7. Storage Config: Use guided storage(entire disk). Unmounted the 100GB `/` partition, edit, then set value of size to entire disk, and mount partition as `/`.
+8. configure a user. I am configuring midnight for me. 
+9. Skip Ubuntu Pro. 
+10. Install OpenSSH server. no keys imported at the moment, should do this later. 
+11. System note: no third party dricers were available for this system. 
+12. Not installing any popular server snaps. 
+
+done. 
+
+
+
+### 10.30 PM
 I have just completed mounting the system on the painted case. 
 
 <img src ="../assets/IMG_6965.jpg" width=450>
