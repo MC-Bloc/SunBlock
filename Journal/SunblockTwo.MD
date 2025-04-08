@@ -20,8 +20,10 @@ Neon has a 500MB limit.
 The lack of redundancy in this system really kills me... I am thinking too industry-side, I need to make things work within constraints. 
 
 I need to think about this in layers. There needs to be a data layer that is a local backup, then there needs to be the main data that lives on the cloud maybe in neon, maybe elsewhere. I am also thinking of pushing another backup to the tag server but I'm uncertain of that machine for now. Will get back to it later...  
+
 ---
-Setting up SunBlock two as a testbed. 
+
+**Setting up SunBlock two as a testbed.**
 
 What I really need is access to an EPEVER controller through the system because I want to see if we can eliminate the ESP32 microcontroller from the system. 
 I have set up SunBlock Two connected to the EPEVER controller directly with an RS-45 cable with the jackery connected to the EPEVER controller so it can power it on and then I can read the live data from SB2.
