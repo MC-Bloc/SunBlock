@@ -1,0 +1,7 @@
+*.json
+*.csv
+*.db
+arduino/.DS_Store
+.DS_Store
+SunblockCore/.env
+Data Visualization/.ipynb_checkpoints/Sunblock-DataVis-checkpoint.ipynb

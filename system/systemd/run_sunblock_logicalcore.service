@@ -1,0 +1,17 @@
+[Unit]
+Description=This service runs the SunBlockCore(LogicalLayer) -- the power and data manager for SunBlock.
+After=network.target
+
+[Service]
+Type=simple
+User=pc
+Restart=on-failure
+RestartSec=2
+StartLimitInterval=60  
+StartLimitBurst=5
+ExecStart=/usr/local/bin/run_sunblock_logicalcore.sh
+TimeoutStartSec=0
+
+
+[Install]
+WantedBy=default.target
