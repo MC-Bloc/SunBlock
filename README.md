@@ -1,9 +1,9 @@
-# Sunblock One 
-## How To Build A Sunblock
+# SunBlock 
+## How To Build A SunBlock
 
-Sunblock is a solar-powered minecraft server first built at the Milieux Institute, Concordia University, Montreal, Canada. For more on the project checkout [main project website](https://minecraftbloc.milieux.ca/sunblock/)
+SunBlock is a solar-powered minecraft server first built at the Milieux Institute, Concordia University, Montreal, Canada. For more on the project checkout [main project website](https://minecraftbloc.milieux.ca/sunblock/)
 
-Sunblock has a few core components but it is useful to think of them in 3 layers. These are:
+SunBlock has a few core components but it is useful to think of them in 3 layers. These are:
 1. Physical Layer
 2. Logical Layer
 3. Game Layer
@@ -31,7 +31,7 @@ An arduino script interfaces with the microcontroller. And a python script inter
 
 
 ### Game Layer 
-While you can run a plain Java instance of minecraft, we run Minecraft through a CubeCoders AMP instance. Sunblock runs forge minecraft. The choice of the port is up to you.
+While you can run a plain Java instance of minecraft, we run Minecraft through a CubeCoders AMP instance. SunBlock runs forge minecraft. The choice of the port is up to you.
 
 The JSON file (from the logical layer) is read by the minecraft mod. Then this data is sent to the clients running the same mod. 
 
