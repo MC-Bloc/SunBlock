@@ -1,6 +1,10 @@
 # SunBlock Two 
 Shahrom's Journal entries 
 
+## 9th April 2025 
+- Installed the Powerprofiles daemon to see if we have the performance mode available. We do. 
+
+
 ## 7th April 2025 
 
 **Getting a stream of data directly from the controller** 
