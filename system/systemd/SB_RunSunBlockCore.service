@@ -9,7 +9,7 @@ Restart=on-failure
 RestartSec=2
 StartLimitInterval=60  
 StartLimitBurst=5
-ExecStart=/usr/local/bin/run_sunblock_logicalcore.sh
+ExecStart=/usr/local/bin/SB_RunSunBlockCore.sh
 TimeoutStartSec=0
 
 
