@@ -12,16 +12,16 @@ Configuring the logical layer core.
 #### `Bash` script 
 `sudo cp run_sunblock_logicalcore.sh /usr/local/bin/`
 
-`sudo chmod a+x /usr/local/bin/run_sunblock_logicalcore.sh`
+`sudo chmod a+x /usr/local/bin/SB_RunSunBlockCore.sh`
 
 #### `Systemd` service   
 `sudo cp run_sunblock_logicalcore.service /etc/systemd/system/`
 
 `sudo systemctl daemon-reload`
 
-`sudo systemctl enable run_sunblock_logicalcore.service`
+`sudo systemctl enable SB_RunSunBlockCore.service`
 
-`sudo systemctl start run_sunblock_logicalcore.service`
+`sudo systemctl start SB_RunSunBlockCore.service`
 
 
 ----
@@ -32,7 +32,7 @@ Configuring the logical layer core.
 
 `sudo cp run_sunblock_api.sh /usr/local/bin/`
 
-`sudo chmod a+x /usr/local/bin/run_sunblock_api.sh`
+`sudo chmod a+x /usr/local/bin/SB_RunWebServer.sh`
 
 #### `Systemd` service 
 
@@ -40,9 +40,9 @@ Configuring the logical layer core.
 
 `sudo systemctl daemon-reload`
 
-`sudo systemctl enable run_sunblock_api.service`
+`sudo systemctl enable SB_RunWebServer.service`
 
-`sudo systemctl start run_sunblock_api.service`
+`sudo systemctl start SB_RunWebServer.service`
 
 
 ---
@@ -53,12 +53,12 @@ Some tools for looking at issues with systemd scripts.
 
 To see the output of the script as it's starting up:
 
-`sudo journalctl -b -u run_sunblock_api.service` 
+`sudo journalctl -b -u SB_RunWebServer.service` 
 
-`sudo journalctl -b -u run_sunblock_logicalcore.service` 
+`sudo journalctl -b -u SB_RunSunBlockCore.service` 
 
 To see what the script is doing *now*:
 
-`sudo systemctl status run_sunblock_api.service` 
+`sudo systemctl status SB_RunWebServer.service` 
 
-`sudo systemctl status run_sunblock_logicalcore.service`
+`sudo systemctl status SB_RunSunBlockCore.service`
