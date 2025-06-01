@@ -8,7 +8,7 @@ Restart=on-failure
 RestartSec=2
 StartLimitInterval=60  
 StartLimitBurst=5
-ExecStart=/bin/bash /usr/local/bin/SB_RunWebServer.sh
+ExecStart=/bin/bash /usr/local/bin/SB_RunSunBlockExpress.sh
 TimeoutStartSec=0
 
 

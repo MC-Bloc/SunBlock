@@ -1,4 +1,4 @@
 #!/bin/bash
-cd /home/pc/GitHub/SB1-API
-/home/pc/.nvm/versions/node/v22.9.0/bin/node index.js
+cd /home/pc/GitHub/SunBlockExpress # Change this directory based on where you cloned the directory   
+/home/pc/.nvm/versions/node/v22.9.0/bin/node index.js 
 exit 0
