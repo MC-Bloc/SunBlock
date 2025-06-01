@@ -39,7 +39,7 @@ Everything inside the Server computer is part of the logical layer. This compris
 3. [SunBlock StatusPage](https://github.com/MC-Bloc/SunBlock-StatusPage)  
 4. [CubeCoders AMP instance](https://cubecoders.com/AMP) 
 
-A python script (SunBlockCore-LL) interfaces directly with the solar controller over an RS45 using the EpeverModBus Python library. This scirpt collects data in real time every second, and writes it to a JSON file called `solar_data.json`. It also stores all this data in an SQLite database, which is then later used for data analysis using a jupyter notebook. 
+A python script (SunBlockCore-LL) interfaces directly with the solar controller over an RS45 using the [EpeverModBus Python library](https://github.com/rosswarren/epevermodbus). This scirpt collects data in real time every second, and writes it to a JSON file called `solar_data.json`. It also stores all this data in an SQLite database, which is then later used for data analysis using a jupyter notebook. 
 
 That JSON file I mentioned is very important. Once SunBlockCore-LL writes data to it, it is then read by SunBlockCore-GL to display in-game, and by SunBlockExpress which is an express.js server that broadcasts this instantaneous data over a REST API and Socket.io endpoints. [Find this API here](https://github.com/MC-Bloc/SunBlockExpress). 
 I do think I should merge this into SunBlockCore-LL just for simplicity and better DIY. But perhaps I will leave that for people to refine in the OSS community. 
