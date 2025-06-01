@@ -17,7 +17,7 @@ These are:
 
 The three layers are related in this manner: 
 
-<img src ="./Assets/SunBlockOnev1.1.png" width=900>
+<img src ="./assets/SunBlockOnev1.1.png" width=900>
 
 Every layer has a core that is called SunBlockCore (creative, I know). 
 
