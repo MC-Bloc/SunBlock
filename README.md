@@ -18,30 +18,45 @@ These are:
 The three layers are related in this manner: 
 <img src ="./assets/Sunblock_-_System_Diagram.png" width=700>
 
-Every layer has a core that is called SunBlockCore (creative, I know). For the game layer, this is the [Java mod](https://github.com/MC-Bloc/SunBlockCore-GL). For the logical layer, this is [a python script](https://github.com/MC-Bloc/SunBlockCore-LL) that manages things like power profiles, data logging, etc. On the physical layer, the SunBlockCore is [the server](#SunBlockCore-PL) itself, that powers the whole SunBlock system.  
+Every layer has a core that is called SunBlockCore (creative, I know). 
+
+For the game layer, this is the [Java mod](https://github.com/MC-Bloc/SunBlockCore-GL). 
+
+For the logical layer, this is [a python script](https://github.com/MC-Bloc/SunBlockCore-LL) that manages things like power profiles, data logging, etc. 
+
+For the physical layer, [the server computer](#SunBlockCore-PL) itself is the SunBlockCore. 
 
 ## Game Layer (GL)
 SunBlock runs Forge Minecraft `1.20.1`. 
-While you can run a plain Java instance of Minecraft and have it start on boot, we run Minecraft through a [CubeCoders AMP](https://cubecoders.com/AMP) instance. Everything that happens inside Minecraft happens on the game layer. This includes the SunBlockCore Mod, Gaia's Riddle ModPack, and other mods. 
+
+While you can run a plain Java instance of Minecraft and have it start on boot, we run Minecraft through a [CubeCoders AMP](https://cubecoders.com/AMP) instance. Everything that happens inside Minecraft happens on the game layer. This includes the [SunBlockCore Mod](https://github.com/MC-Bloc/SunBlockCore-GL). and the Gaia's Riddle ModPack which includes all the mods for the survival multiplayer we ran from May 1st to July 15th 2025. 
 
 ## Logical Layer (LL)
-Everything inside the Server computer is part of the logical layer. 
+Everything inside the Server computer is part of the logical layer. This comprises of: 
+1. SunBlockCore-LL
+2. SunBlockExpress 
+3. SunBlock StatusPage  
+4. CubeCoders AMP instance. 
 
-An arduino script interfaces with the microcontroller. 
+A python script (SunBlockCore-LL) interfaces directly with the solar controller over an RS45 using the EpeverModBus Python library. This scirpt collects data in real time every second, and writes it to a JSON file called `solar_data.json`. It also stores all this data in an SQLite database, which is then later used for data analysis using a jupyter notebook. 
 
-And a python script interfaces with the arduino scripts results, collecting all data in a simple SQLite database, while also putting instantaneous data in a JSON file.
+That JSON file I mentioned is very important. Once SunBlockCore-LL writes data to it, it is then read by SunBlockCore-GL to display in-game, and by [SunBlockExpress](https://github.com/MC-Bloc/SunBlockExpress) which is an express.js server that broadcasts this instantaneous data over a REST API and Socket.io endpoints. [Find this API here](https://github.com/MC-Bloc/SunBlockExpress). I do think I should merge this into SunBlockCore-LL just for simplicity and better DIY. But perhaps I will leave that for people to refine in the OSS community. 
 
-The Python script also deals with the power profiles daemon and switches between `performance` and `power-saver` profiles which depends on the `intel_pstate` drivers. This is also part of game mechanics 
+The [SunBlock Status Page](https://github.com/MC-Bloc/SB1-StatusPage) *could* be hosted on the server but I decided against it. Primarily because this page was supposed to show if the server is on or not. And if this was hosted on the server itself, and considering it is a solar-powered server, the status page just wouldn't load. In any case, the website can be hosted on one of the cloud platforms and then you set the socket.io endpoint to connect to wherever you hosted SunBlockExpress.  
+
+The Cubecoders AMP instance caries the game layer. Setup is as described on their website. 
 
 ## Physical Layer (PL)
+
 The physical layer comprises of:
 1. The Solar Panel
 2. The Solar Controller
 3. The Battery
-4. The ESP32 Microcontroller
-5. The Server computer (i.e. SunBlockCore-PL) 
+4. The Server computer (i.e. SunBlockCore-PL) 
 
-The Solar controller is connected to the Solar Panel, the battery, the server computer, and the microcontroller. Readings from the solar controller are measured by this microcontroller and sent to the server computer via a micro USB cable.   
+The Solar controller is connected to the Solar Panel, the Battery, and SunBlockCore-PL.
+
+Readings from the solar controller are measured directly through an RS45 cable that connects the controller to the server computer. This 
 
 ### The Battery 
 Throughout the project we have only used 12V LiFePO4 Sealed batteries. We first started with an 18Ah (216Wh) battery but because it got damaged we were not getting full charge capacities. We next went to a 20Ah (240Wh) battery which lasted us less than 24 hours. Next we went to a 50Ah (600Wh) battery which gave us much better performance but we still havent gotten the desired balance so next we will be going to 100Ah (1200Wh).
@@ -70,24 +85,21 @@ This is an [ODroid H4 Plus](https://www.hardkernel.com/shop/odroid-h4-plus/) sys
 
 * 48GB DDR5 RAM
 * 1TB NVMe SSD
-* Processor N97.
+* Intel N97.
 * Ubuntu 24.04 (Server) 
 
-### The Microcontroller 
-Thats just an ESP32. We use this to read data from the solar controller. This controller can be powered by both: The Solar controller via an ethernet port and the PC via USB. 
 
 ## People
 
 1. Bart Simon 
+2. Darren Wershler
 2. Rosie MacDonald
-3. Quinn Saggio
-4. Shahrom Ali
-5. Stuart Thiel
-6. Andrew
-7. Angelica Calcagnile
-8. Ella Noyes
-9. Mario Gaudio 
-10. Don Undeen
-11. Darren Wershler 
-
-
+4. Quinn Saggio
+5. Shahrom Ali
+6. Stuart Thiel
+7. Andrew
+8. Angelica Calcagnile
+9. Ella Noyes
+10. Mario Gaudio 
+11. Don Undeen
+ 
