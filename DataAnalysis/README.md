@@ -1,4 +1,4 @@
-# Sunblock: Data Visualization 
+# Sunblock: Data Analysis 
 
 ### Jupter Lab Config
 
