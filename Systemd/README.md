@@ -8,7 +8,7 @@ Run all commands from this directory from this directory. The `.service` files d
 Configuring the logical layer core. 
 
 ```bash
-sudo cp run_sunblock_logicalcore.sh /usr/local/bin/
+sudo cp SB_RunSunBlockCore.sh /usr/local/bin/
 sudo chmod a+x /usr/local/bin/SB_RunSunBlockCore.sh
 ```
 
@@ -25,7 +25,7 @@ sudo systemctl start SB_RunSunBlockCore.service
 ## SunBlockExpress 
 
 ```bash
-sudo cp run_sunblock_api.sh /usr/local/bin/
+sudo cp SB_RunSunBlockExpress.sh /usr/local/bin/
 sudo chmod a+x /usr/local/bin/SB_RunSunBlockExpress.sh
 ```
 
