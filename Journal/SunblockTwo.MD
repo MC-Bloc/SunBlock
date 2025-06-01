@@ -1,6 +1,16 @@
 # SunBlock Two 
 Shahrom's Journal entries 
 
+## 29th May 2025
+I wanted to remove the ESP32 out of the system. It was causing a 60 second delay. I gathered this much because I was using the Epever console to set the parameters
+for the controller, and I noticed that the data readings were near instantaneous on the RS45 cable. And I also knew that there was already a python library for 
+reading data from the Epever solar controller. Since sunblockcore-LL is already written with python, I decided to revise it and ready directly. 
+
+Less parts = less maintenance = easier to DIY. 
+
+So I did that, then I deployed it on SunBlock One. et voila! Real-Time power readings and most likely also fixed the problem of the double dot. 
+I wonder if this is also going to fix the problem of those very high anomalous points. 
+
 ## 9th April 2025 
 - Installed the Powerprofiles daemon to see if we have the performance mode available. We do. 
 
