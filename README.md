@@ -16,7 +16,8 @@ These are:
 3. Game Layer (GL)
 
 The three layers are related in this manner: 
-<img src ="./assets/SunBlockOnev1.1.png" width=700>
+
+<img src ="./assets/SunBlockOnev1.1.png" width=900>
 
 Every layer has a core that is called SunBlockCore (creative, I know). 
 
