@@ -1,6 +1,7 @@
-*.json
-*.csv
 *.db
+*.env
+*/.DS_Store
+
 arduino/.DS_Store
 .DS_Store
 SunblockCore/.env
