@@ -1,6 +1,25 @@
 # SunBlock Two 
 Shahrom's Journal entries 
 
+## 1st August 2025 
+Setting up SunBlock Two for a new modpack. 
+
+What we need:
+1. SunBlockCore LL 
+2. SunBlockExpress
+
+Both of these are in. I have installed nginx and that allows the connection externally. 
+
+Had to add the cpu power script for sunblockcore-ll.  
+
+Now we have a datastream and also sunblockcore is reading data from the EPEVER solar controller. 
+
+Manually setting a static ip through the terminal: [This link](https://www.freecodecamp.org/news/setting-a-static-ip-in-ubuntu-linux-ip-address-tutorial/)
+
+
+One thing I'm noticing is that there is a lot of editing the sourcecode for all the right paths. This should be an env file. I should do this next. 
+
+
 ## 29th May 2025
 I wanted to remove the ESP32 out of the system. It was causing a 60 second delay. I gathered this much because I was using the Epever console to set the parameters
 for the controller, and I noticed that the data readings were near instantaneous on the RS45 cable. And I also knew that there was already a python library for 
@@ -10,6 +29,14 @@ Less parts = less maintenance = easier to DIY.
 
 So I did that, then I deployed it on SunBlock One. et voila! Real-Time power readings and most likely also fixed the problem of the double dot. 
 I wonder if this is also going to fix the problem of those very high anomalous points. 
+
+Configured static IP address using netplan. YAML files found in `/etc/netplan/`. 
+
+Now configuring through certbot. Just installed core with `sudo snap install core`
+
+Installed AMP, going to use the same key... 
+
+All good! 
 
 ## 9th April 2025 
 - Installed the Powerprofiles daemon to see if we have the performance mode available. We do. 
