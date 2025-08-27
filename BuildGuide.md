@@ -52,7 +52,7 @@ There are always two slots (one for negative and one for positive) for each comp
 
 General convention is that black wire is negative, red wire is positive. Another term for positive is live, and for negative is ground. 
 
-When setting this up, always connect the solar controller to the solar controller first. You need to connect cables from the solar controller to the battery. One end will be bare cables, this will go into the controller. The other end will have the battery terminal adapters, this will go on the battery. 
+When setting this up, always connect the solar controller to the battery first: You need to connect cables from the solar controller to the battery. One end will be bare cables, this will go into the controller. The other end will have the battery terminal adapters, this will go on the battery. 
 
 Next, mount your solar panel however you will, then connect power cables from the panel to the solar controller. Connect the MC4 cables to the solar panel and the other end of these cables to the solar controller. If the other end also has MC4 connectors, you will have to cut the connector off, and strip some of the insulation off to bare the wire. Now connect this to the solar controller. 
 
