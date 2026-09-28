@@ -1,7 +1,7 @@
 `An Obsidian Vault`
 # SunBlock 
 
-SunBlock is a solar-powered Minecraft server at the Milieux Institute, Concordia University, Montreal, Canada. 
+SunBlock One is a solar-powered Minecraft server at the Milieux Institute, Concordia University, Montreal, Canada. 
 
 The goal of our project is to blend the material conditions of gameplay (the computer hardware, networking, and energy infrastructure) with the production of the game world. Rather than just playing a game with thematics or a message around energy transition, we are endeavoring to provide a direct, tangible, and playable experience of the energy infrastructures which make that experience possible..
 For more on the project checkout [main project website](https://minecraftbloc.milieux.ca/sunblock/)
